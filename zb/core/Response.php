@@ -36,7 +36,7 @@ class Response{
                     }
                 }
                 if (is_scalar($data)) {
-                        echo $data;
+                        //echo $data;
                 } elseif (!is_null($data)) {
                         throw new \Exception('不支持的数据类型输出：' . gettype($data));
                 }

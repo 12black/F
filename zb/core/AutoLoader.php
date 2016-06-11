@@ -28,7 +28,6 @@ class AutoLoader{
                         list($name,$class) = explode('\\',$class,2);
                         $path = self::$namespace[$name];
                         $filename = $path . str_replace('\\', DS, $class) . EXT;
-                        echo $filename.'<br />';
                         if (is_file($filename)) {
                                 self::$load[] = $filename;
                                 include $filename;

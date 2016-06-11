@@ -6,7 +6,9 @@ class A{
         public $a;
         function a($c,$b){
                 $m = AutoLoader::model('user');
-                $m->save(array('title'=>'a'));
+                if(!$m->save(array('title'=>'123'))){
+                        var_dump($m->error);
+                }
                 return $c.'===='.$b;
         }
 }
